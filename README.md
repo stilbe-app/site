@@ -17,6 +17,9 @@ Opens at http://localhost:3000.
 | --- | --- |
 | `src/app/page.tsx` | The coming-soon page |
 | `src/app/signin/`, `src/app/account/` | Signing in, and back from Stripe |
+| `src/app/pricing/`, `terms/`, `privacy/`, `refunds/` | What Stilbe is and costs, and the policies (drafts, for a lawyer to review) |
+| `src/lib/business.ts` | The company name, contact email and price those pages show |
+| `src/components/document.tsx`, `site-footer.tsx` | The reading-page layout, and the footer links |
 | `src/components/panel.tsx` | The layout those two share |
 | `src/lib/stilbe-api.ts` | Calls to the AI service |
 | `src/app/layout.tsx` | Fonts (Archivo, with its width axis) and metadata |
