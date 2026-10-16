@@ -52,3 +52,35 @@ body {
   color: var(--color-ink);
 }
 
+
+/* Reading pages (pricing, terms, privacy, refunds): plain, roomy prose. */
+.document {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+.document h2 {
+  margin-top: 2.25rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+.document p,
+.document ul {
+  margin-top: 0.75rem;
+}
+.document ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.document li + li {
+  margin-top: 0.35rem;
+}
+.document a {
+  text-decoration: underline;
+  text-decoration-color: var(--color-glint);
+  text-underline-offset: 3px;
+}
+.document .note {
+  color: var(--color-steel);
+  font-size: 13px;
+}
