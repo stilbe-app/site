@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Stilbe's palette: mercury-grey paper, graphite ink, steel for quiet text,
+   and the cyan of the mark's rim light. Light only, by design. */
+@theme {
+  --color-paper: #e7eaee;
+  --color-ink: #14171c;
+  --color-steel: #7c8591;
+  --color-glint: #35bfea;
+
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+
+  /* The intro, on one clock from the first paint: the glint crosses the mark
+     from 0.35s to 1.85s, and the name and "Coming soon" arrive behind it. */
+  --animate-glint: glint 1.5s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
+  --animate-arrive: arrive 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  /* Off the mark's left edge to its upper-right facet (see bandAt in
+     glint-mark.tsx). */
+  @keyframes glint {
+    from {
+      transform: translateX(-60%);
+    }
+    to {
+      transform: translateX(-29.333%);
+    }
+  }
+
+  @keyframes arrive {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* Archivo's width axis: `font-wide` is the engraved, expanded display cut. */
+@utility font-wide {
+  font-variation-settings: "wdth" 125;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
