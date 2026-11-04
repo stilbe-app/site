@@ -13,7 +13,7 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   title: "Stilbe",
-  description: "Stilbe, a browser for Mac with an agent built in. Coming soon.",
+  description: "Stilbe is a browser for Mac with an agent in it: ask about a page, or hand it the errand. Free to download.",
 };
 
 export const viewport: Viewport = {

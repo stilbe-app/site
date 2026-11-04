@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* The agents' faces breathe and blink, as in the app. */
+@import "blobatar/motion.css";
 
 /* Stilbe's palette: mercury-grey paper, graphite ink, steel for quiet text,
    and the cyan of the mark's rim light. Light only, by design. */
@@ -6,6 +8,8 @@
   --color-paper: #e7eaee;
   --color-ink: #14171c;
   --color-steel: #7c8591;
+  /* Body text in grey: steel is too faint for paragraphs on the paper. */
+  --color-slate: #4f5661;
   --color-glint: #35bfea;
 
   --font-sans: var(--font-archivo), system-ui, sans-serif;

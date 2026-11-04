@@ -1,8 +1,8 @@
 # Stilbe website
 
-The public website for Stilbe. For now it's a single coming-soon page: the
-mark, the name and two words. It's built with Next.js (App Router),
-TypeScript and Tailwind CSS v4.
+The public website for Stilbe: a download page (what it is, the agent shown
+at work, what it does, the plans), with pricing and the legal pages beside
+it. It's built with Next.js (App Router), TypeScript and Tailwind CSS v4.
 
 ```bash
 npm install
@@ -15,7 +15,10 @@ Opens at http://localhost:3000.
 
 | Path | What's there |
 | --- | --- |
-| `src/app/page.tsx` | The coming-soon page |
+| `src/app/page.tsx` | The home page: the download page |
+| `src/components/agent-at-work.tsx` | The hero's drawn Stilbe window, the agent's card working through an errand |
+| `src/components/agent-face.tsx` | Agents' faces, as the app draws them (blobatar, in the glint's hue) |
+| `src/lib/download.ts` | The download link and which Macs it runs on |
 | `src/app/signin/`, `src/app/account/` | Signing in, and back from Stripe |
 | `src/app/pricing/`, `terms/`, `privacy/`, `refunds/` | What Stilbe is and costs, and the policies (drafts, for a lawyer to review) |
 | `src/lib/business.ts` | The company name, contact email and price those pages show |
