@@ -21,6 +21,8 @@
   /* Light behind the page, drifting slowly: the looks' backgrounds. */
   --animate-drift: drift 22s ease-in-out infinite alternate;
   --animate-drift-slow: drift 34s ease-in-out infinite alternate-reverse;
+  --animate-tunnel: tunnel 14s ease-in-out infinite alternate;
+  --animate-spin-slow: spin-slow 50s linear infinite;
 
   /* Off the mark's left edge to its upper-right facet (see bandAt in
      glint-mark.tsx). */
@@ -30,6 +32,21 @@
     }
     to {
       transform: translateX(-29.333%);
+    }
+  }
+
+  @keyframes tunnel {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.07);
+    }
+  }
+
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
     }
   }
 
