@@ -18,6 +18,9 @@
      from 0.35s to 1.85s, and the name and "Coming soon" arrive behind it. */
   --animate-glint: glint 1.5s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
   --animate-arrive: arrive 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  /* Light behind the page, drifting slowly: the looks' backgrounds. */
+  --animate-drift: drift 22s ease-in-out infinite alternate;
+  --animate-drift-slow: drift 34s ease-in-out infinite alternate-reverse;
 
   /* Off the mark's left edge to its upper-right facet (see bandAt in
      glint-mark.tsx). */
@@ -27,6 +30,15 @@
     }
     to {
       transform: translateX(-29.333%);
+    }
+  }
+
+  @keyframes drift {
+    from {
+      transform: translate3d(-4%, -3%, 0) scale(1);
+    }
+    to {
+      transform: translate3d(4%, 3%, 0) scale(1.08);
     }
   }
 
