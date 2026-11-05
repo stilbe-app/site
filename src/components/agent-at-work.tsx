@@ -123,7 +123,7 @@ export function AgentAtWork() {
           </div>
         </div>
       </div>
-      <figcaption className="mt-4 text-center text-[13px] text-steel">The agent&rsquo;s card sits over the page&rsquo;s corner, so the page keeps its width. ⌘E folds it away.</figcaption>
+      <figcaption className="mt-4 text-center text-[13px] text-steel">The agent rests in the corner of the page, leaving it its full width. ⌘E folds it away.</figcaption>
     </figure>
   );
 }

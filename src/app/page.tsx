@@ -85,11 +85,14 @@ export default function Home() {
           />
           <GlintMark className="w-[clamp(96px,16vmin,128px)]" />
           <h1 className="font-wide mt-8 max-w-[14ch] text-[clamp(40px,6vw,72px)] leading-[1.02] font-light tracking-[-0.025em] motion-safe:animate-arrive motion-safe:[animation-delay:0.9s]">
-            A browser with an agent in it
+            The AI&#8209;native browser
           </h1>
-          <p className="mt-6 max-w-[34em] text-[18px] leading-relaxed text-slate motion-safe:animate-arrive motion-safe:[animation-delay:1.1s]">
-            Browse the way you always have. When there&rsquo;s something to do, ask. It works in tabs of its own while you carry on, and asks
-            before anything it can&rsquo;t undo.
+          <p className="mt-6 max-w-[30em] text-[clamp(19px,2vw,23px)] leading-snug font-light text-balance text-ink motion-safe:animate-arrive motion-safe:[animation-delay:1.1s]">
+            An agent built for the browser, and a browser built for the agent.
+          </p>
+          <p className="mt-4 max-w-[36em] text-[16px] leading-relaxed text-pretty text-slate motion-safe:animate-arrive motion-safe:[animation-delay:1.2s]">
+            Browse as you always have. When there&rsquo;s something to be done, hand it over: it works in tabs of its own while you carry on,
+            and asks before anything that can&rsquo;t be undone.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-2.5 motion-safe:animate-arrive motion-safe:[animation-delay:1.3s]">
             <DownloadButton />
@@ -108,11 +111,11 @@ export default function Home() {
         <section id="how" className="scroll-mt-6 bg-white">
           <div className="mx-auto flex max-w-[1180px] flex-col gap-16 px-6 py-24">
             <h2 className="font-wide max-w-[18ch] text-[clamp(30px,3.6vw,44px)] leading-[1.1] font-light tracking-[-0.02em]">
-              Ask about a page, or hand it the whole errand
+              From a question to the whole errand
             </h2>
             <div className="grid gap-x-14 gap-y-14 md:grid-cols-2">
               <Feature
-                title="It reads the page you're on"
+                title="Reads the page in front of you"
                 picture={
                   <Card className="mt-auto ml-auto w-[240px]">
                     <div className="self-end rounded-[10px] bg-[#f3f5f7] px-2.5 py-1.5 text-[12px]">What&rsquo;s the notice period?</div>
@@ -120,11 +123,11 @@ export default function Home() {
                   </Card>
                 }
               >
-                A lease, a long thread, three laptops side by side. Ask what you&rsquo;d ask a friend looking over your shoulder, and it answers
-                from what&rsquo;s in front of you.
+                A lease, a long thread, three laptops side by side. Ask as you would ask someone reading over your shoulder, and the answer comes
+                from the page itself.
               </Feature>
               <Feature
-                title="It works in tabs of its own"
+                title="Works in tabs of its own"
                 picture={
                   <div className="flex w-full flex-col justify-center gap-2.5">
                     {[
@@ -144,11 +147,11 @@ export default function Home() {
                   </div>
                 }
               >
-                It clicks, types and opens what it needs while you keep browsing. Several can work at once, each with its tabs gathered in a group
-                under its face.
+                It clicks, types and opens what it needs while you keep browsing. Several can work at once, each keeping its tabs together under
+                its own face.
               </Feature>
               <Feature
-                title="It asks before it can't take it back"
+                title="Asks before what can't be undone"
                 picture={
                   <Card className="m-auto w-[260px] gap-2.5 p-3.5">
                     <div className="text-[13px] font-medium">Send the RSVP to Maya?</div>
@@ -160,8 +163,8 @@ export default function Home() {
                   </Card>
                 }
               >
-                Sending, buying, signing: it stops and asks. In auto mode it goes ahead on its own, and still asks before paying or using your
-                saved details, which it never sees.
+                Before it sends, buys or signs, it pauses for you. In auto mode it carries on by itself, yet still asks before paying or using
+                your saved details, which it never sees.
               </Feature>
               <Feature
                 title="Agents of your own"
@@ -176,8 +179,8 @@ export default function Home() {
                   </div>
                 }
               >
-                Give one a name and a way of working, and its face comes from the name. It remembers what you tell it to, keeps its chats, and can
-                run a task every morning, or when a page changes.
+                Give one a name and a way of working; its face follows from the name. It remembers what you ask it to, keeps its conversations,
+                and can run a task each morning, or whenever a page changes.
               </Feature>
             </div>
           </div>
@@ -188,7 +191,7 @@ export default function Home() {
           <div className="flex flex-wrap items-start gap-x-16 gap-y-10">
             <div className="flex flex-[1_1_380px] flex-col gap-4">
               <h2 className="font-wide text-[clamp(28px,3vw,38px)] leading-[1.12] font-light tracking-[-0.02em]">
-                And a whole browser, if you never ask it anything
+                A complete browser, before anything else
               </h2>
               <p className="text-[14px] leading-relaxed text-slate">
                 Pages you just browse aren&rsquo;t sent anywhere. When you ask the agent about a page or give it a task, that page&rsquo;s text
@@ -210,7 +213,7 @@ export default function Home() {
           <div className="mx-auto flex max-w-[1180px] flex-col gap-10 px-6 py-24">
             <div className="flex max-w-[40em] flex-col gap-3">
               <h2 className="font-wide text-[clamp(30px,3.6vw,44px)] leading-[1.1] font-light tracking-[-0.02em]">Pricing</h2>
-              <p className="text-[16px] leading-relaxed text-slate">Every feature is in the free plan. Pro only buys more of the agent&rsquo;s AI each month.</p>
+              <p className="text-[16px] leading-relaxed text-slate">Everything is in the free plan. Pro simply gives the agent more to work with each month.</p>
             </div>
             <div className="flex flex-wrap gap-5">
               <div className="flex min-w-0 flex-[1_1_300px] flex-col gap-4 rounded-[20px] bg-[#f3f5f7] p-7 shadow-[inset_0_0_0_1px_#d9dee4]">
@@ -254,7 +257,7 @@ export default function Home() {
 
         <section className="mx-auto flex max-w-[1180px] flex-col items-center gap-6 px-6 pt-20 pb-10 text-center">
           <Image src="/stilbe-mark.png" alt="" width={56} height={56} />
-          <p className="font-wide text-[24px] font-light tracking-[-0.015em]">Try it for a week instead of Chrome.</p>
+          <p className="font-wide text-[24px] font-light tracking-[-0.015em]">Give it a week as your browser.</p>
           <DownloadButton />
           <p className="text-[13px] text-steel">{REQUIREMENT}.</p>
         </section>
