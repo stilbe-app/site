@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GlintMark } from "@/components/glint-mark";
+import { DOWNLOAD, REQUIREMENT } from "@/lib/download";
 
 export const metadata: Metadata = {
   title: "Stilbe beta",
@@ -8,9 +9,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-/** The latest release's disk image, under a name that stays the same from
- *  one release to the next (scripts/release.mjs uploads it as Stilbe.dmg). */
-const DOWNLOAD = "https://github.com/stilbe-app/browser-releases/releases/latest/download/Stilbe.dmg";
 
 const EXPECT = [
   {
@@ -56,7 +54,7 @@ export default function Beta() {
         >
           Download for Mac
         </a>
-        <span className="text-[13px] text-steel">For Macs with Apple silicon, on macOS 12 or later</span>
+        <span className="text-[13px] text-steel">{REQUIREMENT}</span>
       </div>
 
       <section aria-labelledby="expect" className="mt-16 w-full text-left motion-safe:animate-arrive motion-safe:[animation-delay:1.7s]">

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* The agents' faces breathe and blink, as in the app. */
+@import "blobatar/motion.css";
 
 /* Stilbe's palette: mercury-grey paper, graphite ink, steel for quiet text,
    and the cyan of the mark's rim light. Light only, by design. */
@@ -6,6 +8,8 @@
   --color-paper: #e7eaee;
   --color-ink: #14171c;
   --color-steel: #7c8591;
+  /* Body text in grey: steel is too faint for paragraphs on the paper. */
+  --color-slate: #4f5661;
   --color-glint: #35bfea;
 
   --font-sans: var(--font-archivo), system-ui, sans-serif;
@@ -14,6 +18,12 @@
      from 0.35s to 1.85s, and the name and "Coming soon" arrive behind it. */
   --animate-glint: glint 1.5s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
   --animate-arrive: arrive 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  /* Light behind the page, drifting slowly: the looks' backgrounds. */
+  --animate-drift: drift 22s ease-in-out infinite alternate;
+  --animate-drift-slow: drift 34s ease-in-out infinite alternate-reverse;
+  /* The hero's windows, bobbing a little as if afloat. */
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-spin-slow: spin-slow 50s linear infinite;
 
   /* Off the mark's left edge to its upper-right facet (see bandAt in
      glint-mark.tsx). */
@@ -23,6 +33,31 @@
     }
     to {
       transform: translateX(-29.333%);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes drift {
+    from {
+      transform: translate3d(-4%, -3%, 0) scale(1);
+    }
+    to {
+      transform: translate3d(4%, 3%, 0) scale(1.08);
     }
   }
 
@@ -52,3 +87,35 @@ body {
   color: var(--color-ink);
 }
 
+
+/* Reading pages (pricing, terms, privacy, refunds): plain, roomy prose. */
+.document {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+.document h2 {
+  margin-top: 2.25rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+.document p,
+.document ul {
+  margin-top: 0.75rem;
+}
+.document ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.document li + li {
+  margin-top: 0.35rem;
+}
+.document a {
+  text-decoration: underline;
+  text-decoration-color: var(--color-glint);
+  text-underline-offset: 3px;
+}
+.document .note {
+  color: var(--color-steel);
+  font-size: 13px;
+}

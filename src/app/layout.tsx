@@ -12,8 +12,8 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Stilbe",
-  description: "Stilbe, a browser for Mac with an agent built in. Coming soon.",
+  title: "Stilbe: the AI-native browser",
+  description: "Stilbe, the AI-native browser for Mac: an agent built for the browser, and a browser built for the agent.",
 };
 
 export const viewport: Viewport = {

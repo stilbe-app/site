@@ -1,8 +1,8 @@
 # Stilbe website
 
-The public website for Stilbe. For now it's a single coming-soon page: the
-mark, the name and two words. It's built with Next.js (App Router),
-TypeScript and Tailwind CSS v4.
+The public website for Stilbe: a download page (what it is, the agent shown
+at work, what it does, the plans), with pricing and the legal pages beside
+it. It's built with Next.js (App Router), TypeScript and Tailwind CSS v4.
 
 ```bash
 npm install
@@ -15,8 +15,17 @@ Opens at http://localhost:3000.
 
 | Path | What's there |
 | --- | --- |
-| `src/app/page.tsx` | The coming-soon page |
+| `src/app/page.tsx` | The home page: the night with the agent at work on three real sites, then the errands, the four cards, safety and pricing |
+| `src/components/site-scene.tsx` | A Stilbe window on a real site with the agent at work in it; a screenshot from `public/shots/` where there is one, else drawn |
+| `src/components/errand-panel.tsx` | The errands, as tabs over one panel playing its site |
+| `src/components/brand-logo.tsx` | The sites' and apps' logos, from Simple Icons (each its company's trademark) |
+| `src/components/agent-face.tsx` | Agents' faces, as the app draws them (blobatar, in the glint's hue) |
+| `src/components/motion.tsx` | Sections rising in as they're reached, and reduced motion |
+| `src/lib/download.ts` | The download link and which Macs it runs on |
 | `src/app/signin/`, `src/app/account/` | Signing in, and back from Stripe |
+| `src/app/pricing/`, `terms/`, `privacy/`, `refunds/` | What Stilbe is and costs, and the policies (drafts, for a lawyer to review) |
+| `src/lib/business.ts` | The company name, contact email and price those pages show |
+| `src/components/document.tsx`, `site-footer.tsx` | The reading-page layout, and the footer links |
 | `src/components/panel.tsx` | The layout those two share |
 | `src/lib/stilbe-api.ts` | Calls to the AI service |
 | `src/app/layout.tsx` | Fonts (Archivo, with its width axis) and metadata |
