@@ -21,7 +21,8 @@
   /* Light behind the page, drifting slowly: the looks' backgrounds. */
   --animate-drift: drift 22s ease-in-out infinite alternate;
   --animate-drift-slow: drift 34s ease-in-out infinite alternate-reverse;
-  --animate-tunnel: tunnel 14s ease-in-out infinite alternate;
+  /* The hero's windows, bobbing a little as if afloat. */
+  --animate-float: float 8s ease-in-out infinite;
   --animate-spin-slow: spin-slow 50s linear infinite;
 
   /* Off the mark's left edge to its upper-right facet (see bandAt in
@@ -35,12 +36,13 @@
     }
   }
 
-  @keyframes tunnel {
-    from {
-      transform: scale(1);
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
     }
-    to {
-      transform: scale(1.07);
+    50% {
+      transform: translateY(-10px);
     }
   }
 

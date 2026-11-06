@@ -35,7 +35,7 @@ export function useSeen<T extends Element>(margin = "-12% 0px") {
 }
 
 /** Rises into place as it comes into view, `delay` ms after. Already there for reduced motion. */
-export function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
+export function Reveal({ children, delay = 0, className = "", style }: { children: ReactNode; delay?: number; className?: string; style?: React.CSSProperties }) {
   const { ref, seen } = useSeen<HTMLDivElement>();
   return (
     <div
@@ -43,7 +43,7 @@ export function Reveal({ children, delay = 0, className = "" }: { children: Reac
       className={`transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
         seen ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
       } ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ ...style, transitionDelay: `${delay}ms` }}
     >
       {children}
     </div>

@@ -15,9 +15,12 @@ Opens at http://localhost:3000.
 
 | Path | What's there |
 | --- | --- |
-| `src/app/page.tsx` | The home page: the download page |
-| `src/components/agent-at-work.tsx` | The hero's drawn Stilbe window, the agent's card working through an errand |
+| `src/app/page.tsx` | The home page: the night with the agent at work on three real sites, then the errands, the four cards, safety and pricing |
+| `src/components/site-scene.tsx` | A Stilbe window on a real site with the agent at work in it; a screenshot from `public/shots/` where there is one, else drawn |
+| `src/components/errand-panel.tsx` | The errands, as tabs over one panel playing its site |
+| `src/components/brand-logo.tsx` | The sites' and apps' logos, from Simple Icons (each its company's trademark) |
 | `src/components/agent-face.tsx` | Agents' faces, as the app draws them (blobatar, in the glint's hue) |
+| `src/components/motion.tsx` | Sections rising in as they're reached, and reduced motion |
 | `src/lib/download.ts` | The download link and which Macs it runs on |
 | `src/app/signin/`, `src/app/account/` | Signing in, and back from Stripe |
 | `src/app/pricing/`, `terms/`, `privacy/`, `refunds/` | What Stilbe is and costs, and the policies (drafts, for a lawyer to review) |
